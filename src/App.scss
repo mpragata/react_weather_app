@@ -1,0 +1,30 @@
+.app{
+    background-image: url('./assets/warm.jpg');
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+    padding: 20px;
+
+    &.cold{
+        background-image: url('./assets/cold.jpg');
+    }
+}
+
+.searchBox{
+    width: 100%;
+    margin: 0 0 75px;
+
+    .searchBar{
+        border: none;
+        background: none;
+        appearance: none;
+        outline: none;
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 5px rgba(0,0,0,0.2);
+        font-size: 20px;
+    }
+}
