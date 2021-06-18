@@ -4,6 +4,7 @@
     background-position: bottom;
     min-height: 100vh;
     padding: 20px;
+    transition: 2s ease-out;
 
     &.cold{
         background-image: url('./assets/cold.jpg');
@@ -12,19 +13,104 @@
 
 .searchBox{
     width: 100%;
-    margin: 0 0 75px;
-
+    margin: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     .searchBar{
         border: none;
         background: none;
         appearance: none;
         outline: none;
         display: block;
-        width: 100%;
+        width: 25%;
         padding: 15px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.35);
         border-radius: 5px;
         box-shadow: 0 5px rgba(0,0,0,0.2);
         font-size: 20px;
+
+        &:focus{
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+    }
+}
+
+.locationContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .loc{
+        color: white;
+        font-size: 32px;
+        font-weight: 500;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    }
+    .date{
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    }
+}
+
+.weatherContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .temperature{
+        margin: 30px auto;
+        background-color: rgba(255, 255, 255, 0.35);
+        padding: 15px 25px;
+        font-size: 100px;
+        font-weight: 900;
+        color: rgb(135, 125, 125);
+        text-shadow: 2px 4px rgba(50, 50, 70, 0.5);
+        box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+
+    .weather{
+        color: rgb(135, 125, 125);
+        font-size: 48px;
+        font-weight: 700;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+    }
+}
+
+.forecastContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .forecastText{
+        color: rgb(94, 86, 86);
+        font-size: 30px;
+        font-weight: 700;
+        text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+        margin: 30px auto;
+    }
+    
+    .forecastTemp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        .forecastTextContainer{
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.35);
+            padding: 15px 25px;
+            font-size: 30px;
+            color: rgb(135, 125, 125);
+            box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
     }
 }
